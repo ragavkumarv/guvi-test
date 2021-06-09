@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Reading
+      console.log("My cookies ", document.cookie);
+      // Writing or Setting the cookie
+      document.cookie = "name=Arun";
+      document.cookie = "friends=['Aswinee', 'Jagadeesh']";
+      console.log("My cookies ", document.cookie, typeof document.cookie);
+
+ 
+
+      function getCookie(key) {
+        const keyValue = document.cookie
+        .split("; ")
+        .find((cook) => cook.startsWith(`${key}=`));
+      console.log("KeyValue ", keyValue);
+      // console.log(keyValue.split("=")[1]);
+      return keyValue ? keyValue.split("=")[1] : 
+      "the cookie is not found";
+      }
+
+      console.log(getCookie('friends'));
+      console.log(getCookie('name'));
+      console.log(getCookie('ext_name'));
+      console.log(getCookie('asdf'));
+
+      document.cookie = 'name=; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+      document.cookie = 'friends=; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+
+      // Task is to get and print the friends alone
+      // ['Aswinee', 'Jagadeesh']
+    </script>
+  </head>
+  <body>
+    <!-- <button class="btn btn-primary">Nice</button>
+    <button class="btn btn-danger">Carefull</button>
+    <ul>
+      <li id="one">One</li>
+      <li id="two" class="second secondary-color">Two</li>
+      <li class="second secondary-color">Three</li>
+    </ul>
+
+    <p class="secondary-color">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+      doloremque nam nemo eum fugiat nulla sit? Praesentium vel fugit
+      necessitatibus quibusdam odio a architecto aut voluptatem quam? Ex
+      eligendi minima iusto iste atque! Deleniti dicta accusamus nisi tempora
+      unde incidunt officia quaerat temporibus totam voluptatem dolore ullam,
+      optio, beatae aliquam.
+    </p>
+
+    <!-- inline styles -->
+    <p style="color: grey; font-size: 18px">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+      doloremque nam nemo eum fugiat nulla sit? Praesentium vel fugit
+      necessitatibus quibusdam odio a architecto aut voluptatem quam? Ex
+      eligendi minima iusto iste atque! Deleniti dicta accusamus nisi tempora
+      unde incidunt officia quaerat temporibus totam voluptatem dolore ullam,
+      optio, beatae aliquam.
+    </p>
+    -->
+  </body>
+</html>
+
+<!-- html:5 -->
